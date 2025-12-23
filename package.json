@@ -1,0 +1,22 @@
+{
+  "name": "repo-dashboard",
+  "version": "1.0.0",
+  "description": "Local-first GitHub visibility dashboard for engineering teams",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "backend:dev": "npm run dev --workspace=backend",
+    "frontend:dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend"
+  },
+  "author": "Good To Book",
+  "license": "Unlicensed",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

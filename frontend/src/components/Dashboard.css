@@ -1,0 +1,23 @@
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+}
+
+.dashboard-columns {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: var(--color-border);
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-columns {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+}

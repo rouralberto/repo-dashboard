@@ -50,14 +50,27 @@ npm install
 # Set your GitHub token
 export GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
 
-# Start the backend (runs on port 3001)
-npm run backend:dev
-
-# In a separate terminal, start the frontend (runs on port 5173)
-npm run frontend:dev
+# Start both backend and frontend with a single command
+npm start
 ```
 
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
+This will start:
+- **Backend** on [http://localhost:3001](http://localhost:3001)
+- **Frontend** on [http://localhost:5173](http://localhost:5173)
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Running Separately (optional)
+
+If you need to run the services separately:
+
+```bash
+# Start the backend only (port 3001)
+npm run backend:dev
+
+# Start the frontend only (port 5173)
+npm run frontend:dev
+```
 
 ## Environment Variables
 

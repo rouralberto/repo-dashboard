@@ -9,10 +9,14 @@
     "frontend"
   ],
   "scripts": {
+    "start": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"cyan,magenta\" \"npm run backend:dev\" \"npm run frontend:dev\"",
     "install:all": "npm install",
     "backend:dev": "npm run dev --workspace=backend",
     "frontend:dev": "npm run dev --workspace=frontend",
     "build": "npm run build --workspace=backend && npm run build --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   },
   "author": "Good To Book",
   "license": "Unlicensed",
